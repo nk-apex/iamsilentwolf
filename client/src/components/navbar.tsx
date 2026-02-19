@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Terminal, Menu, X } from "lucide-react";
+import { Terminal, Menu, X, Users, Radio } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,6 +32,36 @@ export function Navbar() {
               data-testid="link-github"
             >
               GitHub
+            </a>
+            <a
+              href="https://chat.whatsapp.com/HjFc3pud3IA0R0WGr1V2Xu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider flex items-center gap-1.5"
+              data-testid="link-whatsapp-group"
+            >
+              <Users className="w-3.5 h-3.5" />
+              Group
+            </a>
+            <a
+              href="https://whatsapp.com/channel/0029Vb6dn9nEQIaqEMNclK3Y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider flex items-center gap-1.5"
+              data-testid="link-whatsapp-channel"
+            >
+              <Radio className="w-3.5 h-3.5" />
+              Channel
+            </a>
+            <a
+              href="https://wa.me/254713046497"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider flex items-center gap-1.5"
+              data-testid="link-whatsapp"
+            >
+              <SiWhatsapp className="w-3.5 h-3.5" />
+              WhatsApp
             </a>
             <a
               href="#contact"
@@ -70,6 +101,39 @@ export function Navbar() {
               data-testid="mobile-link-github"
             >
               GitHub
+            </a>
+            <a
+              href="https://chat.whatsapp.com/HjFc3pud3IA0R0WGr1V2Xu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider text-center flex items-center justify-center gap-1.5"
+              onClick={() => setMobileOpen(false)}
+              data-testid="mobile-link-whatsapp-group"
+            >
+              <Users className="w-3.5 h-3.5" />
+              WhatsApp Group
+            </a>
+            <a
+              href="https://whatsapp.com/channel/0029Vb6dn9nEQIaqEMNclK3Y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider text-center flex items-center justify-center gap-1.5"
+              onClick={() => setMobileOpen(false)}
+              data-testid="mobile-link-whatsapp-channel"
+            >
+              <Radio className="w-3.5 h-3.5" />
+              WhatsApp Channel
+            </a>
+            <a
+              href="https://wa.me/254713046497"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-btn rounded-md px-4 py-2 text-xs font-heading uppercase tracking-wider text-center flex items-center justify-center gap-1.5"
+              onClick={() => setMobileOpen(false)}
+              data-testid="mobile-link-whatsapp"
+            >
+              <SiWhatsapp className="w-3.5 h-3.5" />
+              WhatsApp
             </a>
             <a
               href="#contact"
