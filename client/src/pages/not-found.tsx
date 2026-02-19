@@ -1,21 +1,24 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Terminal } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
+    <div className="min-h-screen grid-bg flex items-center justify-center px-4">
+      <div className="text-center">
+        <h1 className="font-heading text-6xl sm:text-8xl neon-text mb-4" data-testid="text-404">
+          404
+        </h1>
+        <p className="text-sm text-muted-foreground mb-6 font-mono" data-testid="text-404-message">
+          <Terminal className="w-4 h-4 inline mr-2 text-[#39FF14]" />
+          Error: Page not found in the system
+        </p>
+        <a
+          href="/"
+          className="neon-btn-filled rounded-md px-6 py-3 text-xs font-heading uppercase tracking-wider inline-block"
+          data-testid="link-go-home"
+        >
+          Return to Base
+        </a>
+      </div>
     </div>
   );
 }
