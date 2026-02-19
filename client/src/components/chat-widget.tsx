@@ -12,7 +12,7 @@ export function ChatWidget() {
     {
       role: "ai",
       content:
-        "Hey! I'm SilentWolf's AI assistant. Ask me anything — about the projects, tech, or whatever you're curious about.",
+        "Hey! I'm W.O.L.F — Wise Operational Learning Function. Ask me anything — about the projects, tech, or whatever you're curious about.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -40,18 +40,15 @@ export function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const res = await fetch(
-        "https://wolfmusicapi-al6b.onrender.com/api/ai/gpt",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            prompt: trimmed,
-            system:
-              "You are SilentWolf's AI assistant on a cyberpunk-themed portfolio site. Be helpful, concise, and friendly. You can answer questions about tech, programming, SilentWolf's projects (WhatsApp Bot, Pterodactyl Hosting, WolFlix, Wolf Music API, Code Obfuscator), or any general questions.",
-          }),
-        }
-      );
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          prompt: trimmed,
+          system:
+            "You are W.O.L.F (Wise Operational Learning Function), SilentWolf's AI assistant on a cyberpunk-themed portfolio site. Be helpful, concise, and friendly. You can answer questions about tech, programming, SilentWolf's projects (WhatsApp Bot, Pterodactyl Hosting, WolFlix, Wolf Music API, Code Obfuscator), or any general questions. If asked who you are, say you are W.O.L.F — Wise Operational Learning Function.",
+        }),
+      });
 
       const data = await res.json();
 
@@ -101,7 +98,7 @@ export function ChatWidget() {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#39FF14] pulse-glow" />
               <span className="font-heading text-[10px] uppercase tracking-wider text-[#39FF14]">
-                Wolf AI Terminal
+                W.O.L.F Terminal
               </span>
             </div>
             <button
@@ -130,7 +127,7 @@ export function ChatWidget() {
                 >
                   {msg.role === "ai" && (
                     <span className="text-[9px] font-heading uppercase tracking-wider text-[#39FF14] block mb-1">
-                      Wolf AI
+                      W.O.L.F
                     </span>
                   )}
                   <p className="text-[11px] text-muted-foreground leading-relaxed whitespace-pre-wrap">
@@ -144,7 +141,7 @@ export function ChatWidget() {
               <div className="flex justify-start">
                 <div className="glass-card rounded-md p-3 max-w-[85%]">
                   <span className="text-[9px] font-heading uppercase tracking-wider text-[#39FF14] block mb-1">
-                    Wolf AI
+                    W.O.L.F
                   </span>
                   <div className="flex items-center gap-2">
                     <Loader2 className="w-3 h-3 text-[#39FF14] animate-spin" />
