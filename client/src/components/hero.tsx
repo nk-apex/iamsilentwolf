@@ -23,7 +23,8 @@ export function Hero() {
         </h1>
 
         <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed" data-testid="text-hero-subtitle">
-          Full-stack developer crafting bots, APIs, hosting platforms, and tools.
+          I am just an explorer — tech is my hobby.
+          Crafting bots, APIs, hosting platforms, and tools along the way.
           Welcome to my terminal — explore the projects below.
         </p>
 

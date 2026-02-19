@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Wolf Music API",
-    description: "A RESTful music API service providing endpoints for audio data, search, and streaming capabilities. Built for developers who need music integration.",
+    description: "A RESTful music API service providing endpoints for audio data, search, and streaming capabilities. Built for those who need music integration.",
     icon: Code,
     tags: ["REST API", "Music", "Backend"],
     liveUrl: "https://wolfmusicapi-al6b.onrender.com/",
